@@ -1,4 +1,8 @@
 import { defineConfig, devices } from '@playwright/test';
+import dotenv from 'dotenv';
+
+// Load .env so specs and readers can use process.env (see util/dbReader.ts).
+dotenv.config();
 
 export default defineConfig({
   testDir: './tests',
